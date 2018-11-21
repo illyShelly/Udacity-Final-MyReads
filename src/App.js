@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import * as BooksAPI from './BooksAPI'
-
+import * as BooksAPI from './BooksAPI';
+import Book from './components/Book';
 
 class App extends Component {
   state = {
-    testbooks: ["ahoj", "jak", "se", "mas"],
-    book: []
+    // testbooks: ["ahoj", "jak", "se", "mas"],
+    books: []
   }
   // fetch book from API
 
@@ -15,7 +15,7 @@ class App extends Component {
       // check contains of data
       console.log(data);
       this.setState({
-        book: data
+        books: data
       })
     })
   }
@@ -28,23 +28,9 @@ class App extends Component {
         <h1>My reads</h1>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
-            <ul className="books-template">
-             {this.state.book.map(book => (
-              <li key={book.id}>
-                <div className="book">
+           <Book books={this.state.books}
+           />
 
-                    <div
-                      style={{ width: 128,
-                        height: 193,
-                        /*'url("http")'*/
-                        backgroundImage: `url("${book.imageLinks.thumbnail}"` }}>
-                    </div>
-                    <div className="book-title">{book.title}</div>
-                    <div className="book-author">{book.authors}</div>
-                  </div>
-              </li>
-              ))}
-            </ul>
           </div>
 
       </div>
