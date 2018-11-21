@@ -1,5 +1,5 @@
 .App {
-  /*text-align: center;*/
+  text-align: center;
 }
 
 .books-template {
@@ -22,13 +22,6 @@
   box-shadow: 11px 15px 14px lightgrey;
   padding: 10px;
 }
-
-/*.book-top {
-  position: relative;
-  height: 200px;
-  display: flex;
-  align-items: flex-end;
-}*/
 
 .book-title {
   margin-top: 10px;

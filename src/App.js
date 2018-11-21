@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as BooksAPI from './BooksAPI';
+import Mainpage from './components/Mainpage';
 import Book from './components/Book';
 
 class App extends Component {
@@ -28,8 +29,12 @@ class App extends Component {
         <h1>My reads</h1>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
-           <Book books={this.state.books}
-           />
+            <Mainpage
+            books={this.state.books}
+            />
+
+          {/* <Book books={this.state.books}
+           />*/}
 
           </div>
 
