@@ -8,15 +8,15 @@ function Mainpage(props) {
       <Shelf
         books={props.books}
         shelf="currentlyReading"
-        >Currently Reading</Shelf>
+        >Reading Right Now</Shelf>
       <Shelf
         books={props.books}
         shelf="wantToRead"
-        >Want to read</Shelf>
+        >Desire To Read</Shelf>
       <Shelf
         books={props.books}
         shelf="read"
-        >Read</Shelf>
+        >Just Finished</Shelf>
     </div>
   )
 }

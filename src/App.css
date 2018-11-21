@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: #344040;
 }
 
 .books-template {
@@ -7,7 +8,7 @@
   padding: 0;
   margin: 0;
   display: flex;
-  /*justify-content: center;*/
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -18,7 +19,7 @@
 
 .book {
   width: 140px;
-  background-color: #f9f9f8;
+  background-color: #d2d2b647;
   box-shadow: 11px 15px 14px lightgrey;
   padding: 10px;
 }
@@ -31,4 +32,11 @@
 .book-author {
   font-size: 14px;
   color: #418692;
+}
+
+.shelf-title {
+  text-align: left;
+  padding: 10px;
+  background: linear-gradient(360deg, black, #33767373);
+  color: #ffcbdd;
 }

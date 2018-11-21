@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>My reads</h1>
+        <h1>MY R.E.A.D.S</h1>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
             <Mainpage

@@ -10,7 +10,7 @@ function Book(props) {
           backgroundImage: `url("${props.book.imageLinks.smallThumbnail}")` }}>
       </div>
       <div className="book-title">{props.book.title}</div>
-      <div className="book-author">{props.book.authors}</div>
+      <div className="book-author">{props.book.authors.join(' | ')}</div>
     </div>
     )
 }
