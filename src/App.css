@@ -3,6 +3,7 @@
   color: #344040;
 }
 
+/*book related CSS*/
 .books-template {
   list-style-type: none;
   padding: 0;
@@ -18,25 +19,56 @@
 }
 
 .book {
-  width: 140px;
-  background-color: #d2d2b647;
+  width: 160px;
+  background-color: #8bd1d91c;
   box-shadow: 11px 15px 14px lightgrey;
   padding: 10px;
+  height: auto;
+  position: relative; /*to switcher*/
 }
 
 .book-title {
   margin-top: 10px;
   font-size: 14px;
+  text-align: left;
 }
 
 .book-author {
   font-size: 14px;
   color: #418692;
+  text-align: left;
+
 }
 
+/*Shelf related CSS*/
 .shelf-title {
   text-align: left;
   padding: 10px;
   background: linear-gradient(360deg, black, #33767373);
-  color: #ffcbdd;
+  color: #cce1e6;
+}
+
+/*Book switcher to book relative*/
+.switcher {
+  position: absolute;
+  right: -14px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 0;
+  /*border-radius: 50%;*/
+  /*background-image: url('./icons/switcher.svg');*/
+  background: #344040;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  box-shadow: 3px 4px 16px rgba(0,0,0,0.56), 2px 3px 6px rgba(0,0,0,0.23);
+}
+
+/*fitting into switcher circle*/
+.switcher select {
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* not to be visible */
+  cursor: pointer;
 }

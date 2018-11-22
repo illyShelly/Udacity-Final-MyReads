@@ -1,8 +1,10 @@
 import React from 'react';
+import Switcher from './Switcher';
 
 function Book(props) {
   return (
     <div className="book">
+      <Switcher />
       <div
         style={{ width: 128,
           height: 193,

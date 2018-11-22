@@ -8,6 +8,7 @@ function Shelf(props) {
 {/*      props.children display CONTENT between opening/closing component tag
 */}   <h2 className="shelf-title">{props.children}</h2>
       <ul className="books-template">
+    {/*display books to the right shelf*/}
         {props.books.filter(book => book.shelf === props.shelf)
           .map(book => (
             <li key={book.id}>
