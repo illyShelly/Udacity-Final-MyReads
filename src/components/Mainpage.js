@@ -7,15 +7,18 @@ function Mainpage(props) {
     <div>
       <Shelf
         books={props.books}
-        shelf="currentlyReading"
+        changeShelf={props.changeShelf}
+        onshelf="currentlyReading"
         >Reading Right Now</Shelf>
       <Shelf
         books={props.books}
-        shelf="wantToRead"
+        changeShelf={props.changeShelf}
+        onshelf="wantToRead"
         >Desire To Read</Shelf>
       <Shelf
         books={props.books}
-        shelf="read"
+        changeShelf={props.changeShelf}
+        onshelf="read"
         >Just Finished</Shelf>
     </div>
   )

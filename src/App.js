@@ -10,16 +10,31 @@ class App extends Component {
     books: []
   }
   // fetch book from API
-
   componentDidMount() {
-    BooksAPI.getAll().then(data => {
+    BooksAPI.getAll()
+    .then(data => {
       // check contains of data
       console.log(data);
-      this.setState({
-        books: data
+      this.setState({ books: data })
+    })
+    .catch(error => console.log(error + " this error happend"))
+  }
+
+  // update state when calling event method on switcher
+  // without refresh method -> pass other promise
+  // pass the method as props through the app
+  changeToShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+    .then(() => {
+      console.log(` "${book.title}" moving to: "${shelf}" `);
+      BooksAPI.getAll()
+      .then((books) => {
+        this.setState({books: books})
       })
     })
+    .catch(error => console.log(error + " this error happend"));
   }
+
 // do not write (book) => {} wrong syntax
 // Each child in an array unique "key" prop.
 // id looks like: id: "nggnmAEACAAJ"
@@ -31,6 +46,7 @@ class App extends Component {
           {/*<p>{this.state.testbooks[0]}</p> */}
             <Mainpage
             books={this.state.books}
+            changeShelf={this.changeToShelf}
             />
 
           {/* <Book books={this.state.books}

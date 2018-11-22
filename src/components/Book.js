@@ -4,7 +4,10 @@ import Switcher from './Switcher';
 function Book(props) {
   return (
     <div className="book">
-      <Switcher />
+      <Switcher
+      changeShelf={props.changeShelf}
+      onshelf={props.onshelf}
+      />
       <div
         style={{ width: 128,
           height: 193,
@@ -12,7 +15,10 @@ function Book(props) {
           backgroundImage: `url("${props.book.imageLinks.smallThumbnail}")` }}>
       </div>
       <div className="book-title">{props.book.title}</div>
-      <div className="book-author">{props.book.authors.join(' | ')}</div>
+      <div className="book-author">
+       {props.book.authors ? props.book.authors.join(' | ') : ''}
+      </div>
+      <div className="book-title">{props.book.publishedDate}</div>
     </div>
     )
 }

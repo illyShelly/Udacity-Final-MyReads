@@ -26,6 +26,9 @@
   height: auto;
   position: relative; /*to switcher*/
 }
+.book:hover {
+  opacity: 0.85;
+}
 
 .book-title {
   margin-top: 10px;
