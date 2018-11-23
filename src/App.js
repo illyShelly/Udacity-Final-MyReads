@@ -3,6 +3,7 @@ import './App.css';
 import * as BooksAPI from './BooksAPI';
 import Mainpage from './components/Mainpage';
 import Book from './components/Book';
+import Searchpage from './components/Searchpage';
 
 class App extends Component {
   state = {
@@ -44,14 +45,13 @@ class App extends Component {
         <h1>MY R.E.A.D.S</h1>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
-            <Mainpage
+          {/*  <Mainpage
             books={this.state.books}
             changeShelf={this.changeShelf}
-            />
-
-          {/* <Book books={this.state.books}
+            />*/}
+            {/* <Book books={this.state.books}
            />*/}
-
+           <Searchpage />
           </div>
 
       </div>
