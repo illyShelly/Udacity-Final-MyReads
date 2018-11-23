@@ -23,7 +23,7 @@ class App extends Component {
   // update state when calling event method on switcher
   // without refresh method -> pass other promise
   // pass the method as props through the app
-  changeToShelf = (book, shelf) => {
+  changeShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
     .then(() => {
       console.log(` "${book.title}" moving to: "${shelf}" `);
@@ -46,7 +46,7 @@ class App extends Component {
           {/*<p>{this.state.testbooks[0]}</p> */}
             <Mainpage
             books={this.state.books}
-            changeShelf={this.changeToShelf}
+            changeShelf={this.changeShelf}
             />
 
           {/* <Book books={this.state.books}
