@@ -7,6 +7,7 @@ function Book(props) {
       <Switcher
       changeShelf={props.changeShelf}
       onshelf={props.onshelf}
+      book={props.book}
       />
       <div
         style={{ width: 128,
