@@ -3,6 +3,16 @@
   color: #344040;
 }
 
+nav h1 {
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(#162f45, #33767373);
+  color: #e5f2f2;
+  letter-spacing: -3px;
+  word-spacing: 5px;
+  font-size: 34px;
+}
+
 /*book related CSS*/
 .books-template {
   list-style-type: none;
@@ -16,6 +26,11 @@
 /*space between books*/
 .books-template li {
   padding: 10px;
+}
+
+.book img {
+  width: 128;
+  height: 193;
 }
 
 .book {
@@ -46,8 +61,10 @@
 .shelf-title {
   text-align: left;
   padding: 10px;
-  background: linear-gradient(360deg, black, #33767373);
-  color: #cce1e6;
+  background: linear-gradient(179deg, #162f45, #33767373);
+  /*color: #cce1e6;*/
+  color: white;
+  letter-spacing: -2px;
 }
 
 /*Book switcher to book relative*/
@@ -61,7 +78,7 @@
   border-bottom-right-radius: 0;
   /*border-radius: 50%;*/
   /*background-image: url('./icons/switcher.svg');*/
-  background: #344040;
+  background: #1f3b53;
   background-repeat: no-repeat;
   background-size: 15px;
   box-shadow: 3px 4px 16px rgba(0,0,0,0.56), 2px 3px 6px rgba(0,0,0,0.23);
@@ -73,4 +90,18 @@
   height: 100%;
   opacity: 0; /* not to be visible */
   cursor: pointer;
+}
+
+/*Search page*/
+.search {
+  /*margin: 10px;*/
+}
+
+.search input {
+  width: 99%;
+  height: 40px;
+  font-size: 18px;
+  color: #999;
+  padding-left: 5px;
+  letter-spacing: 2.5px;
 }

@@ -7,15 +7,16 @@ import Searchpage from './components/Searchpage';
 
 class App extends Component {
   state = {
-    // testbooks: ["ahoj", "jak", "se", "mas"],
+    // testbooks: ["how", "are", "you", "all"],
     books: []
   }
+
   // fetch book from API
   componentDidMount() {
     BooksAPI.getAll()
     .then(data => {
       // check contains of data
-      console.log(data);
+      // console.log(data);
       this.setState({ books: data })
     })
     .catch(error => console.log(error + " this error happend"))
@@ -36,22 +37,26 @@ class App extends Component {
     .catch(error => console.log(error + " this error happend"));
   }
 
+
 // do not write (book) => {} wrong syntax
 // Each child in an array unique "key" prop.
 // id looks like: id: "nggnmAEACAAJ"
   render() {
     return (
       <div className="App">
-        <h1>MY R.E.A.D.S</h1>
+        <nav> <h1>My Reads</h1></nav>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
-          {/*  <Mainpage
+         {/* <Mainpage
             books={this.state.books}
             changeShelf={this.changeShelf}
             />*/}
             {/* <Book books={this.state.books}
            />*/}
-           <Searchpage />
+           <Searchpage
+            books={this.state.books}
+            changeShelf={this.changeShelf}
+           />
           </div>
 
       </div>

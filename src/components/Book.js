@@ -2,18 +2,17 @@ import React from 'react';
 import Switcher from './Switcher';
 
 function Book(props) {
+
   return (
     <div className="book">
       <Switcher
       changeShelf={props.changeShelf}
       onshelf={props.onshelf}
-      book={props.book}
+      book={props.book} // forget to add book id does not work in Switcher
       />
-      <div
-        style={{ width: 128,
-          height: 193,
-          /*'url("http")'*/
-          backgroundImage: `url("${props.book.imageLinks.smallThumbnail}")` }}>
+      <div>
+      <img src={props.book.imageLinks ? props.book.imageLinks.smallThumbnail : ''}
+          alt={props.book.title}/>
       </div>
       <div className="book-title">{props.book.title}</div>
       <div className="book-author">

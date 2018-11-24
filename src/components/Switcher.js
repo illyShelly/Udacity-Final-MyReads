@@ -6,6 +6,7 @@ function Switcher(props) {
       <select onChange={(event) =>
         props.changeShelf(props.book, event.target.value)
       }
+      // current value of the book's shelf
         value={props.book.shelf}
       >
       <option value="move" disabled>Move to...</option>
