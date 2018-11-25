@@ -9,7 +9,7 @@ function Switcher(props) {
       // current value of the book's shelf
         value={props.book.shelf}
       >
-      <option value="move" disabled>Move to...</option>
+      <option value="move">Move to...</option>
       <option value="currentlyReading">Currently Reading</option>
       <option value="wantToRead">Want to Read</option>
       <option value="read">Read</option>

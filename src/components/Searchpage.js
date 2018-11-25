@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as BooksAPI from '../BooksAPI';
-import Shelf from './Shelf';
+// import Shelf from './Shelf';
 import Book from './Book'
 
 class Searchpage extends Component {
@@ -13,32 +13,34 @@ class Searchpage extends Component {
   }
   // 1. handle event from input search
   // 2. method get API data - display all when search
-  //   - promise all OK / catch error
-  //   - change state for search string
+    //  - promise all OK / catch error
+    //  - change state for search string
   // 3. solving if/else statement - when search input is empty - deleted
-
+  // 4. display all books on search page with assigning shelf value
+    // - compare book.id with apibook.id from data
+    // - when match -> assign book.shelf value to searched book's shelf
+ // 5. solve default shelf for data apibooks
   handleSearch(event) {
     if(event) {
-       // console.log(event) // shows typed string
-       BooksAPI.search(event)
-       // receive data matched search input string
-      .then(data => {
-        // console.log(data) // shows found array of objects
-        // console.log(this.props.books); // get books from mainpage - NEED TO compare if already displayed
-        // let filteredData =
-        //   data.map(dat => (this.props.books.filter((book) =>
-        //     book.id === dat.id)
-        //     .map(book => dat.shelf === book.shelf)))
-        // console.log(filteredData);
-        this.setState(
-          { apibooks: data })
-          // { apibooks: filteredData })
-      })
-      // when search input is empty -> cannot read property .map
-      .catch(error => console.log(error + " something went wrong"));
-      this.setState({ search: event })
+     // console.log(event) // shows typed string
+     BooksAPI.search(event)
+     // receive data matched search input string
+    .then(data => {
+      // console.log(data)
+      // console.log(data.map(dat => dat.shelf)) // testing array of objects
+      // console.log(this.props.books.map(book => book.id) + " from main");
+      let assignShelfById = data.filter(dat => (this.props.books.filter((book) => book.id === dat.id).map(bo => dat.shelf = bo.shelf)));
+      this.setState(
+        // { apibooks: data })
+        { apibooks: assignShelfById
+        })
+    })
+    // when search input is empty -> cannot read property .map
+    .catch(error => console.log(error + " something went wrong"));
+    // change state when search input contain any string/letter
+    this.setState({ search: event })
     }
-    // deleting string from input search - back to empty state => no error .map
+    // delete string from input search - back to empty state => no error .map
     else {
       this.setState({
         search: '',
@@ -59,10 +61,10 @@ class Searchpage extends Component {
         />
         {/*needs to be above - otherwise - each book is in <ul>*/}
         <ul className="books-template">
-            {this.state.apibooks.map((book) =>
-                <li key={book.id}>
+            {this.state.apibooks.map((apibook) =>
+                <li key={apibook.id}>
                   <Book
-                    book={book}
+                    book={apibook}
                     changeShelf={this.props.changeShelf}
                   />
                 </li>
@@ -73,6 +75,27 @@ class Searchpage extends Component {
     )
   }
 }
+
+/* <ol className="books-grid">
+    {this.state.searchedBooks.map(searchedBook => {
+      let value = "none";
+     this.props.books.map(books => (
+      books.id === searchedBook.id ?
+      value = books.shelf : ''
+
+    ));
+ return (<li key={searchedBook.id}>
+         <Books
+            book={searchedBook}
+            currentShelf={value}
+            changeShelf={this.props.changeShelf}
+          />
+      </li>
+      )
+    })
+  }
+</ol> */
+
 export default Searchpage;
 
 {/*(20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as BooksAPI from './BooksAPI';
-// import Mainpage from './components/Mainpage';
+import Mainpage from './components/Mainpage';
 // import Book from './components/Book';
 import Searchpage from './components/Searchpage';
 
@@ -47,15 +47,16 @@ class App extends Component {
         <nav> <h1>My Reads</h1></nav>
           <div className="">
           {/*<p>{this.state.testbooks[0]}</p> */}
-         {/* <Mainpage
-            books={this.state.books}
-            changeShelf={this.changeShelf}
-            />*/}
+            {/* <Mainpage
+              books={this.state.books}
+              changeShelf={this.changeShelf}
+            /> */}
+
             {/* <Book books={this.state.books}
            />*/}
            <Searchpage
-            books={this.state.books}
-            changeShelf={this.changeShelf}
+              books={this.state.books}
+              changeShelf={this.changeShelf}
            />
           </div>
 
