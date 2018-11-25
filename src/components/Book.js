@@ -6,9 +6,9 @@ function Book(props) {
   return (
     <div className="book">
       <Switcher
-      changeShelf={props.changeShelf}
-      onshelf={props.onshelf}
-      book={props.book} // forget to add book id does not work in Switcher
+        changeShelf={props.changeShelf}
+        onshelf={props.onshelf}
+        book={props.book} // forget to add book id does not work in Switcher
       />
       <div>
       <img src={props.book.imageLinks ? props.book.imageLinks.smallThumbnail : ''}
