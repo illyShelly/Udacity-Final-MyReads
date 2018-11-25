@@ -10,15 +10,20 @@ function Book(props) {
         onshelf={props.onshelf}
         book={props.book} // forget to add book id does not work in Switcher
       />
+
       <div>
       <img src={props.book.imageLinks ? props.book.imageLinks.smallThumbnail : ''}
           alt={props.book.title}/>
       </div>
-      <div className="book-title">{props.book.title}</div>
+      <div className="book-title">
+        {props.book.title}
+      </div>
       <div className="book-author">
        {props.book.authors ? props.book.authors.join(' | ') : ''}
       </div>
-      <div className="book-title">{props.book.publishedDate}</div>
+      <div className="book-title">
+        {props.book.publishedDate}
+      </div>
     </div>
     )
 }

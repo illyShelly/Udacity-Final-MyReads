@@ -44,18 +44,18 @@ class Searchpage extends Component {
           // onChange={this.handleSearch}
           value={this.state.search}
         />
-       <div className="books-template">
-            {this.state.apibooks.map((apibook) =>
-              <ul className="books">
-                <li key={apibook.id}>
+        {/*needs to be above - otherwise - each book is in <ul>*/}
+        <ul className="books-template">
+            {this.state.apibooks.map((book) =>
+                <li key={book.id}>
                   <Book
-                    book={apibook}
+                    book={book}
                     changeShelf={this.props.changeShelf}
                   />
                 </li>
-              </ul>
             )}
-      </div>
+        </ul>
+
     </div>
     )
   }
