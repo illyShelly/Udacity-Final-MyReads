@@ -11,28 +11,41 @@ class Searchpage extends Component {
       search: '' // at the beggining empty string
     }
   }
+  // 1. handle event from input search
+  // 2. method get API data - display all when search
+  //   - promise all OK / catch error
+  //   - change state for search string
+  // 3. solving if/else statement - when search input is empty - deleted
 
   handleSearch(event) {
-    // console.log(event) // shows typed string
-     BooksAPI.search(event)
-     // receive data matched search input string
-    .then(data => {
-      // console.log(data) // shows found array of objects
-      // console.log(this.props.books); // get books from mainpage - NEED TO compare if already displayed
-      // let filteredData =
-      //   data.map(dat => (this.props.books.filter((book) =>
-      //     book.id === dat.id)
-      //     .map(book => dat.shelf === book.shelf)))
-      // console.log(filteredData);
-      this.setState(
-        { apibooks: data })
-        // { apibooks: filteredData })
-    })
-
-    // when search input is empty -> cannot read property .map
-    .catch(error => console.log(error + " something went wrong"));
-    this.setState({ search: event })
+    if(event) {
+       // console.log(event) // shows typed string
+       BooksAPI.search(event)
+       // receive data matched search input string
+      .then(data => {
+        // console.log(data) // shows found array of objects
+        // console.log(this.props.books); // get books from mainpage - NEED TO compare if already displayed
+        // let filteredData =
+        //   data.map(dat => (this.props.books.filter((book) =>
+        //     book.id === dat.id)
+        //     .map(book => dat.shelf === book.shelf)))
+        // console.log(filteredData);
+        this.setState(
+          { apibooks: data })
+          // { apibooks: filteredData })
+      })
+      // when search input is empty -> cannot read property .map
+      .catch(error => console.log(error + " something went wrong"));
+      this.setState({ search: event })
     }
+    // deleting string from input search - back to empty state => no error .map
+    else {
+      this.setState({
+        search: '',
+        apibooks: []
+      })
+    }
+ }
 
   render() {
     return(
