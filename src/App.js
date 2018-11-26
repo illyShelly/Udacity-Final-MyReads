@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 import './App.css';
 import * as BooksAPI from './BooksAPI';
 import Mainpage from './components/Mainpage';
@@ -45,28 +46,29 @@ class App extends Component {
     return (
       <div className="App">
         <nav> <h1>My Reads</h1></nav>
-          <div className="">
-          {/*<p>{this.state.testbooks[0]}</p> */}
-            {/* <Mainpage
-              books={this.state.books}
-              changeShelf={this.changeShelf}
-            /> */}
 
-            {/* <Book books={this.state.books}
-           />*/}
-           <Searchpage
-              books={this.state.books}
-              changeShelf={this.changeShelf}
-           />
-          </div>
-
+         {/*<p>{this.state.testbooks[0]}</p> */}
+             <Route exact path='/' render={() => (
+                <Mainpage
+                  books={this.state.books}
+                  changeShelf={this.changeShelf}
+                />
+              )}
+              />
+            {/* <Book books={this.state.books} />*/}
+            <Route exact path='/search' render={() => (
+              <Searchpage
+                  books={this.state.books}
+                  changeShelf={this.changeShelf}
+                />
+              )}
+            />
       </div>
     );
   }
 }
 
 export default App;
-
 
 // allowAnonLogging: true
 // authors: ["William E. Shotts, Jr."]

@@ -10,7 +10,8 @@ function Shelf(props) {
       <ul className="books-template">
     {/*display books to the right shelf*/}
 
-        {props.books.filter(book => book.shelf === props.onshelf).map(book => (
+        {props.books.filter(book => book.shelf === props.onshelf)
+        .map(book => (
             <li key={book.id}>
               <Book
                 book={book}
