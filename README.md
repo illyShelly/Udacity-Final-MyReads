@@ -6,7 +6,7 @@ This is **Project #7** which is developed for Google Front-End Nanodegree Progra
 
 * [Overview](#overview)
 * [How to Run Application](#how-to-run-application)
-* [To Get Started](#how-to-run-application)
+* [To Get Started](#to-get-started)
 * [About The Project](#about-the-project)
 * [Contribution](#contribution)
 
@@ -55,10 +55,10 @@ The **backend API** uses a fixed set of cached search results that is limited to
 
 ## To Get Started
 
-### Interact directly on GithubPages
+#### Interact directly on GithubPages
 **[GithubPages](https://illyShelly.github.io/udacity-final-myreads)**
 
-### Locally on your machine
+#### Locally on your machine
 * Download the repo
 * `cd` _udacity-final-myreads_ folder
 * Install all dependencies with `yarn install or npm install`
@@ -73,9 +73,7 @@ The goal of the application is to help you to manage the state of a list of book
 * Want to Read (Desire to Read)
 * Read (Just Finished)
 
-You can add new book by pressing the ***+*** link in navbar or in the "/search" page.
-
-Each of book has the button to move the book between shelves or remove it entirely from main page.
+You can add new book by pressing the ***+*** link in navbar or in the "/search" page. Each of book has the button to move the book between shelves or remove it entirely from main page.
 
 
 ### Dependencies
