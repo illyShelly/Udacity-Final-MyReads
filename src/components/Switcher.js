@@ -10,9 +10,9 @@ function Switcher(props) {
         value={props.book.shelf}
       >
       <option value="move">Move to...</option>
-      <option value="currentlyReading">Currently Reading</option>
-      <option value="wantToRead">Want to Read</option>
-      <option value="read">Read</option>
+      <option value="currentlyReading">Reading Right Now</option>
+      <option value="wantToRead">Desire To Read</option>
+      <option value="read">Just Finished</option>
       <option value="none">None</option>
       </select>
     </div>

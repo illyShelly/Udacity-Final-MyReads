@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './App.css';
 import * as BooksAPI from './BooksAPI';
 import Mainpage from './components/Mainpage';
@@ -45,7 +46,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav> <h1>My Reads</h1></nav>
+        <nav>
+          <Link to="/" className="nav-link">HOME</Link>
+          <h1>My Reads</h1>
+          <Link to="/search"
+          className="nav-link"><span>+</span> Add book</Link>
+        </nav>
 
          {/*<p>{this.state.testbooks[0]}</p> */}
              <Route exact path='/' render={() => (
@@ -63,6 +69,12 @@ class App extends Component {
                 />
               )}
             />
+      <footer>
+        <p>Created by:
+          <Link to="https://github.com/illyShelly"
+          className="footer-link"> <i>illyShelly</i></Link>
+        </p>
+        </footer>
       </div>
     );
   }
