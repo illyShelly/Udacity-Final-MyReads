@@ -1,6 +1,6 @@
 # MyReads Udacity Project
 
-This is **Project #7** which is developed for Google Front-End Nanodegree Program at Udacity made with REACT. Project was started from scratch. Web application is available on **[GithubPages](http://illyshelly.github.io/Udacity-Final-MyReads/)**
+This is **Project #7** which is developed for Google Front-End Nanodegree Program at Udacity made with REACT. Project was started from scratch. Web application is available on **[GithubPages](https://illyshelly.github.io/Udacity-Final-MyReads/)**
 
 ## Table of Contents
 
@@ -56,7 +56,7 @@ The **backend API** uses a fixed set of cached search results that is limited to
 ## To Get Started
 
 #### Interact directly on GithubPages
-**[GithubPages](http://illyshelly.github.io/Udacity-Final-MyReads/)**
+**[GithubPages](https://illyshelly.github.io/Udacity-Final-MyReads/)**
 
 #### Locally on your machine
 * Download the repo
