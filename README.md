@@ -5,7 +5,6 @@ This is **Project #7** which is developed for Google Front-End Nanodegree Progra
 ## Table of Contents
 
 * [Overview](#overview)
-* [How to Run Application](#how-to-run-application)
 * [To Get Started](#to-get-started)
 * [About The Project](#about-the-project)
 * [Contribution](#contribution)
