@@ -56,7 +56,7 @@ The **backend API** uses a fixed set of cached search results that is limited to
 ## To Get Started
 
 #### Interact directly on GithubPages
-**[GithubPages](https://illyShelly.github.io/udacity-final-myreads)**
+**[GithubPages]()**
 
 #### Locally on your machine
 * Download the repo
