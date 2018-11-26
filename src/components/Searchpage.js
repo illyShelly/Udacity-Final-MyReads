@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import * as BooksAPI from '../BooksAPI';
 import Book from './Book';
+import Shelf from './Shelf';
+
 
 class Searchpage extends Component {
   constructor(props) {
@@ -55,7 +57,7 @@ class Searchpage extends Component {
       <div className="search">
         <input
           type="text"
-          placeholder="Search by author or title of the book..."
+          placeholder="Search by author or title of the book ..."
           onChange={(event) => this.handleSearch(event.target.value)}
           // onChange={this.handleSearch}
           value={this.state.search}
@@ -67,7 +69,6 @@ class Searchpage extends Component {
                 <Book
                   book={apibook}
                   changeShelf={this.props.changeShelf}
-                  onshelf={this.value}
                 />
               </li>
             )}

@@ -49,7 +49,7 @@ class App extends Component {
       <div className="App">
         <nav>
           <Link to="/" className="nav-link">HOME</Link>
-          <h1>My Reads</h1>
+          <h1>MyReads</h1>
           <Link to="/search"
           className="nav-link"><span>+</span> Add book</Link>
         </nav>
@@ -67,6 +67,7 @@ class App extends Component {
               <Searchpage
                   books={this.state.books}
                   changeShelf={this.changeShelf}
+                  book={this.props.book}
                 />
               )}
             />

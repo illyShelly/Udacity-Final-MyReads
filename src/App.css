@@ -3,7 +3,7 @@
   color: #344040;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 nav {
@@ -17,12 +17,13 @@ nav {
 
 nav h1 {
   color: #e5f2f2;
-  letter-spacing: -3px;
+  letter-spacing: -5px;
   word-spacing: 5px;
   font-size: 34px;
   margin: 0;
-  padding: 10px 200px; /* help links from endge */
+  padding: 10px 200px; /* help links from edge with space-around*/
 }
+
 /* links to home and search page */
 nav span {
   color: #ff017e;
@@ -60,7 +61,7 @@ footer p {
 
 .footer-link {
   text-decoration: none;
-  color: #5bd4e2;
+  color: #8bd1d9;
   font-weight: 600;
   font-size: 14px;
   text-align: center;
@@ -132,7 +133,7 @@ footer p {
   border-bottom-right-radius: 0;
   /*border-radius: 50%;*/
   /*background-image: url('./icons/switcher.svg');*/
-  background: #1f3b53;
+  background: #456b71;
   background-repeat: no-repeat;
   background-size: 15px;
   box-shadow: 3px 4px 16px rgba(0,0,0,0.56), 2px 3px 6px rgba(0,0,0,0.23);
@@ -159,4 +160,5 @@ footer p {
   /*padding-left: 15px;*/
   letter-spacing: 2.5px;
   text-align: center;
+  box-shadow: 0px 20px 26px 0px #4186923d;
 }

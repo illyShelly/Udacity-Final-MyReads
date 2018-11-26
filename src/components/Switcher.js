@@ -4,12 +4,12 @@ function Switcher(props) {
   return (
     <div className="switcher">
       <select onChange={(event) =>
-        props.changeShelf(props.book, event.target.value)
-      }
+        props.changeShelf(props.book, event.target.value)}
       // current value of the book's shelf
-        value={props.book.shelf}
+      // added for Search page to have default shelf-value for searched book
+        value={props.book.shelf || 'none'}
       >
-      <option value="move" disabled>Move to...</option>
+      <option value="move" disabled>JUMP to...</option>
       <option value="currentlyReading">Reading Right Now</option>
       <option value="wantToRead">Desire To Read</option>
       <option value="read">Just Finished</option>

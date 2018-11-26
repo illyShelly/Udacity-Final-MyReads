@@ -1,44 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MyReads Udacity Project
 
-## Available Scripts
+This is **Project #7** which is developed for Google Front-End Nanodegree Program at Udacity made with REACT. Project was started from scratch. Web application is available on **[GithubPages](https://illyShelly.github.io/udacity-final-myreads)**
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+* [Overview](#overview)
+* [How to Run Application](#how-to-run-application)
+* [To Get Started](#how-to-run-application)
+* [About The Project](#about-the-project)
+* [Contribution](#contribution)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This is Project #7 made for Udacity classroom on FEND+React track. To achieve the requirements - students can either use starter code provided by Udacity or build the project from scratch using this file [`BooksAPI.js`](src/BooksAPI.js) providing operations on backend side.
 
-### `npm test`
+#### Starter Code
+> link https://github.com/udacity/reactnd-project-myreads-starter
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### From Scratch
+> link https://github.com/facebook/create-react-app
 
-### `npm run build`
+#### Specification
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The starter code containes all the CSS and HTML markup to save you some time without any React code. The goal is to add interactivity to the app by refactoring the static code using React components.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### Backend Server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To simplify development process, there is provided a backend server for students to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods that will be needed to perform necessary operations on the backend side:
+* [`getAll`](#getall)
+* [`update`](#update)
+* [`search`](#search)
 
-### `npm run eject`
+#### Important
+The **backend API** uses a fixed set of cached search results that is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### React Components Structure
+```
+<App />
+    <!-- <Route /> path='/' -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    <Mainpage />
+      <Shelf />
+        <Book />
+          <Switcher />
+    <Footer />
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    <!-- <Route /> path='/search' -->
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    <Searchpage />
+      <Book />
+        <Switcher />
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## To Get Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Interact directly on GithubPages
+**[GithubPages](https://illyShelly.github.io/udacity-final-myreads)**
+
+### Locally on your machine
+* Download the repo
+* `cd` _udacity-final-myreads_ folder
+* Install all dependencies with `yarn install or npm install`
+* Start the server with `yarn start or npm start`
+* If not opening automatically in your browser, visit `http://localhost:3000`
+
+## About The Project
+
+The goal of the application is to help you to manage the state of a list of books on main page. You have the choice between 3 shelves:
+
+* Currently Reading (Reading Right Now)
+* Want to Read (Desire to Read)
+* Read (Just Finished)
+
+You can add new book by pressing the ***+*** link in navbar or in the "/search" page.
+
+Each of book has the button to move the book between shelves or remove it entirely from main page.
+
+
+### Dependencies
+
+* React Router - [`react-router-dom`](https://www.npmjs.com/package/react-router-dom)
+
+
+## Contribution
+
+This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+
+For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).

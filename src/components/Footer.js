@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return(
     <footer>
-        <p>Created by:
+        <p>@2018 Created by
           <Link to="https://github.com/illyShelly"
-          className="footer-link"> <i>illyShelly</i></Link>
+          className="footer-link"> <i>illyShelly </i></Link>
         </p>
         </footer>
   )
