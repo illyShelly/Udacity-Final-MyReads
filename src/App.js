@@ -6,6 +6,7 @@ import * as BooksAPI from './BooksAPI';
 import Mainpage from './components/Mainpage';
 // import Book from './components/Book';
 import Searchpage from './components/Searchpage';
+import Footer from './components/Footer';
 
 class App extends Component {
   state = {
@@ -69,12 +70,12 @@ class App extends Component {
                 />
               )}
             />
-      <footer>
+      {/*<footer>
         <p>Created by:
           <Link to="https://github.com/illyShelly"
           className="footer-link"> <i>illyShelly</i></Link>
         </p>
-        </footer>
+        </footer>*/}
       </div>
     );
   }

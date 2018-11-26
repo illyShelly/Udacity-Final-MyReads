@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as BooksAPI from '../BooksAPI';
-import Book from './Book'
+import Book from './Book';
 
 class Searchpage extends Component {
   constructor(props) {
@@ -72,7 +72,6 @@ class Searchpage extends Component {
               </li>
             )}
         </ul>
-
     </div>
     )
   }

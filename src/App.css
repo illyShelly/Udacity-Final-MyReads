@@ -43,7 +43,7 @@ nav a:hover {
 }
 
 footer {
-  background-color: #162f45c7;
+  background-color: #162f45;
   /*position: fixed;*/
   /*bottom: 0;
   left: 0;*/
@@ -54,15 +54,15 @@ footer p {
   padding: 7px;
   margin: 0;
   color: white;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 1px;
 }
 
 .footer-link {
   text-decoration: none;
-  color: #ff017e;
+  color: #5bd4e2;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
 }
 /*book related CSS*/
@@ -158,4 +158,5 @@ footer p {
   color: #999;
   /*padding-left: 15px;*/
   letter-spacing: 2.5px;
+  text-align: center;
 }

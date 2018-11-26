@@ -1,5 +1,6 @@
 import React from 'react';
 import Shelf from './Shelf';
+import Footer from './Footer';
 
 // on main page 3 shelves
 function Mainpage(props) {
@@ -20,6 +21,7 @@ function Mainpage(props) {
         changeShelf={props.changeShelf}
         onshelf="read"
         >Just Finished</Shelf>
+        <Footer />
     </div>
   )
 }
