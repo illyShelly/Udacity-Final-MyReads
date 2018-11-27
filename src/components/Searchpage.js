@@ -32,22 +32,27 @@ class Searchpage extends Component {
      BooksAPI.search(event)
      // receive data matched search input string
     .then(data => {
-      // console.log(data)
-      // console.log(data.map(dat => dat.shelf)) // testing array of objects
-      // console.log(this.props.books.map(book => book.id) + " from main");
-      let assignShelfById = data.filter(dat => (this.props.books.filter((book) => book.id === dat.id).map(bo => dat.shelf = bo.shelf)));
-      this.setState(
+            // console.log(data)
+            // console.log(data.map(dat => dat.shelf)) // testing array of objects
+            // console.log(this.props.books.map(book => book.id) + " from main");
+    // Review = SOLVING GIBBERISH in search input
+      if(data.error) {
+        this.setState({
+          apibooks: []
+        });
+      }
+      else {
+        let assignShelfById = data.filter(dat => (this.props.books.filter((book) => book.id === dat.id).map(bo => dat.shelf = bo.shelf)));
+        this.setState(
         // { apibooks: data })
-        { apibooks: assignShelfById
-        })
+        { apibooks: assignShelfById });
+      }
     })
     // when search input is empty -> cannot read property .map
-    .catch(error => console.log(error + " something went wrong"));
-    // Review = SOLVING GIBBERISH in search input
-    this.setState({
-      apibooks: []
-     })
+    .catch(error =>
+      console.log(error + " something went wrong"));
     }
+    // no searching string
     // delete string from input search - back to empty state => no error .map
     else {
       this.setState({
