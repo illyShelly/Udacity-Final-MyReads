@@ -2,6 +2,7 @@ import React from 'react';
 import Switcher from './Switcher';
 
 function Book(props) {
+  const placeholder = "http://via.placeholder.com/128x193?text=No%20Cover";
 
   return (
     <div className="book">
@@ -12,7 +13,7 @@ function Book(props) {
       />
 
       <div>
-      <img src={props.book.imageLinks ? props.book.imageLinks.smallThumbnail : ''}
+      <img src={props.book.imageLinks ? props.book.imageLinks.smallThumbnail : `${placeholder}`}
           alt={props.book.title}/>
       </div>
       <div className="book-title">
@@ -45,3 +46,5 @@ export default Book;
  //      </div>
  //  </li>
  //  ))}
+
+// backgroundImage:`url(${book.imageLinks && book.imageLinks.thumbnail?`${book.imageLinks.thumbnail}`:`http://via.placeholder.com/128x193?text=No%20Cover`})`

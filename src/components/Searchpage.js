@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as BooksAPI from '../BooksAPI';
 import Book from './Book';
-import Shelf from './Shelf';
+// import Shelf from './Shelf';
 
 
 class Searchpage extends Component {
@@ -27,7 +27,7 @@ class Searchpage extends Component {
     // change state when search input contain any string/letter
       this.setState({
       search: event
-     })
+     });
      // console.log(event) // shows typed string
      BooksAPI.search(event)
      // receive data matched search input string
@@ -35,7 +35,6 @@ class Searchpage extends Component {
       // console.log(data)
       // console.log(data.map(dat => dat.shelf)) // testing array of objects
       // console.log(this.props.books.map(book => book.id) + " from main");
-      let value='none'
       let assignShelfById = data.filter(dat => (this.props.books.filter((book) => book.id === dat.id).map(bo => dat.shelf = bo.shelf)));
       this.setState(
         // { apibooks: data })

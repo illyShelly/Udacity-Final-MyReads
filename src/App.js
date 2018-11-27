@@ -6,7 +6,7 @@ import * as BooksAPI from './BooksAPI';
 import Mainpage from './components/Mainpage';
 // import Book from './components/Book';
 import Searchpage from './components/Searchpage';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 class App extends Component {
   state = {
