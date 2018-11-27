@@ -24,6 +24,10 @@ class Searchpage extends Component {
 
   handleSearch(event) {
     if(event) {
+    // change state when search input contain any string/letter
+      this.setState({
+      search: event
+     })
      // console.log(event) // shows typed string
      BooksAPI.search(event)
      // receive data matched search input string
@@ -40,8 +44,10 @@ class Searchpage extends Component {
     })
     // when search input is empty -> cannot read property .map
     .catch(error => console.log(error + " something went wrong"));
-    // change state when search input contain any string/letter
-    this.setState({ search: event })
+    // Review = SOLVING GIBBERISH in search input
+    this.setState({
+      apibooks: []
+     })
     }
     // delete string from input search - back to empty state => no error .map
     else {

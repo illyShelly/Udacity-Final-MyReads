@@ -2,7 +2,7 @@ import React from 'react';
 
 function Switcher(props) {
   return (
-    <div className="switcher">
+    <div className="switcher switcher-icon">
       <select onChange={(event) =>
         props.changeShelf(props.book, event.target.value)}
       // current value of the book's shelf

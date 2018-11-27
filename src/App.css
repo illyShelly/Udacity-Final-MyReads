@@ -95,6 +95,7 @@ footer p {
   height: auto;
   position: relative; /*to switcher*/
   margin-bottom: 20px; /* moved from footer */
+  align-items: flex-end;
 }
 .book:hover {
   opacity: 0.85;
@@ -130,13 +131,16 @@ footer p {
   width: 40px;
   height: 40px;
   border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 0;
   /*border-radius: 50%;*/
-  /*background-image: url('./icons/switcher.svg');*/
-  background: #456b71;
-  background-repeat: no-repeat;
-  background-size: 15px;
+  background-color: #3f5f73; /*when background - than hide my ICON!!!!!*/
   box-shadow: 3px 4px 16px rgba(0,0,0,0.56), 2px 3px 6px rgba(0,0,0,0.23);
+}
+
+.switcher-icon {
+  background-image: url('./icons/switcher.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 21px;
 }
 
 /*fitting into switcher circle*/
