@@ -83,6 +83,11 @@ class Searchpage extends Component {
               </li>
             )}
         </ul>
+
+        {/*when content is in search, searched book has error => empty []*/}
+        {(this.state.search !== '') ?
+          this.state.apibooks.length === 0 && (<h2 className="alert-logo">@no existing book@</h2>)
+          : undefined}
     </div>
     )
   }
