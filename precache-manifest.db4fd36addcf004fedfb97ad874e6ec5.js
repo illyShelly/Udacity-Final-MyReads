@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "72f8f91a5b0828a17597",
+    "revision": "655f537aeb1b903ff603",
     "url": "/Udacity-Final-MyReads/static/css/main.4f822fee.chunk.css"
   },
   {
-    "revision": "72f8f91a5b0828a17597",
-    "url": "/Udacity-Final-MyReads/static/js/main.35eec54b.chunk.js"
+    "revision": "655f537aeb1b903ff603",
+    "url": "/Udacity-Final-MyReads/static/js/main.b93b38e0.chunk.js"
   },
   {
     "revision": "7bcce8e9436433d9ec2b",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Udacity-Final-MyReads/static/media/switcher.be2d9c0a.svg"
   },
   {
-    "revision": "064aff6d9e4cdd8f528825b8aadbca37",
+    "revision": "b271b7f7a7d235b96e2aa966804d64a1",
     "url": "/Udacity-Final-MyReads/index.html"
   }
 ];
